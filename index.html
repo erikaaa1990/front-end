@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300;1,600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./css/swiper.min.css">
+  <script src="https://kit.fontawesome.com/e4bf6fa22a.js" crossorigin="anonymous"></script>
+  <style></style>
+
+</head>
+
+<body>
+  <header id="header-container">
+    <div class="header-master">
+      <div class="logo">
+        <img src="./images/logo-mini.png"></img>
+        <span class="companyName">Playhouse Theatre</span>
+      </div>
+      <nav class="nav">
+        <ul>
+          <li class="dropdown">
+              <div>
+              <a href="javascript:;" data-id=0 class="active">What's on</a>
+              <div class="nav-panel-whatson">
+                  <a>2022 at Playhouse</a>
+                  <a>Past Show</a>
+              </div>
+            </div>
+          </li>
+          <li class="dropdown">
+            <div>
+              <a href="javascript:;" data-id=1>BookNow</a>
+              <div class="nav-panel-booknow">
+                <a>Vouchers</a>
+            </div>
+          </div>
+          </li>
+          <li class="dropdown">
+            <div>
+              <a href="javascript:;" data-id=2>Critique</a>
+              <div class="nav-panel-critique">
+                  <a>Idea</a>
+                  <a>principle</a>
+              </div>
+            </div>
+          </li>
+          <li class="dropdown">
+            <div>
+              <a href="javascript:;" data-id=2>AboutUs</a>
+              <div class="nav-panel-aboutus">
+                  <a>Playhouse History</a>
+                  <a>Venue hire</a>
+            </div>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    
+      <nav class="register">
+        <div class="search hidden">
+          <input class="search-input" type="text" id="search" placeholder="search" size="30" autocomplete="off"/>
+          <img class="close-icon"
+            src="images/icons8-close.svg"
+            role="img" />
+          
+          <ul class="listName">
+            <li><a href="#">Swan Lake</a></li>
+            <li><a href="#">Romeo and Juliet</a></li>
+            <li><a href="#">Cat</a></li>
+            <li><a href="#">Midsummer Night</a></li>
+          </ul>
+          
+        </div>
+        <span><i class="fa-solid fa-magnifying-glass fa-sm"></i></span>
+        <ul class="registerUl">
+          <li><a href="javascript:;" class="active" data-id=3>Login</a></li>
+          <li><a href="javascript:;" data-id=3>SignUp</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main-content" class="main-content active" data-id=0>
+    <div class="app">
+      <!-- Swiper -->
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><a><img src="images/Ballet-Buxton-1200.jpg"></a></div>
+          <div class="swiper-slide"><a><img src="images/romeo-juliet-1200w.jpg"></a></div>
+          <div class="swiper-slide"><a><img src="images/Ballet-Buxton-1200.jpg"></a></div>
+          <div class="swiper-slide"><a><img src="images/romeo-juliet-1200w.jpg"></a></div>
+
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+      <div class="slider-intro">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Year</th>
+              <th>2020-2021</th>
+              <th>Coming Screens</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1932</td>
+              <td>34 screens</td>
+              <td>10/06/2022</td>
+            </tr>
+          </tbody>
+        </table>
+        <span>Swan Lake</span>
+
+      </div>
+
+    </div>
+
+    <!--News-->
+    <div class="news-master"></div>
+    <!--Divide Bar-->
+    <div class="divider"></div>
+    <!--Critiques-->
+    <div class="critique-master"></div>
+
+    <!--<div class="test"></div>-->
+    <div class="seatRows"></div>
+
+
+  </main>
+
+  <!--seats seat-plan-->
+  <main id="main-content" class="main-content" data-id=1 style="display: none;">
+    <div class="book-theater"></div>
+    <div class="seat-plan"></div>
+  </main>
+
+  <!--register form-->
+  <main id="main-content" class="main-content" data-id=2 style="display: none;"></main>
+
+
+  <!-- news components-->
+  <main id="main-content" class="main-content" data-id=3 style="display: none;"></main>
+  <footer id="footer-container">
+  </footer>
+
+
+
+  <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  <script src="https://unpkg.com/react-tabs/dist/react-tabs.production.min.js" />
+  </script>
+  
+  <script src="./js/swiper.min.js"></script>
+  <script type="text/babel" src="index.js"></script>
+  <script src="./effect.js"></script>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      pagination: {
+        el: ".swiper-pagination",
+      },
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+    });
+  </script>
+
+</body>
+
+</html>
